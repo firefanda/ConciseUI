@@ -5,16 +5,6 @@
 INSERT OR REPLACE INTO LocalizedText (Language, Tag, Text) VALUES
 
 -- =============================================================================
--- Config
-("ko_KR", "LOC_CUI_CONFIG_CATEGORY",                                            "Concise UI"),
-("ko_KR", "LOC_CUI_CONFIG_PLACE_MAP_PIN",                                       "맵 트래커 추가"),
-("ko_KR", "LOC_CUI_CONFIG_TOGGLE_IMPROVED",                                     "향상된 자원 토글"),
-("ko_KR", "LOC_CUI_CONFIG_TOGGLE_UNIT_FLAGS",                                   "유닛 플래그 토글"),
-("ko_KR", "LOC_CUI_CONFIG_TOGGLE_TRADERS",                                      "교역로 아이콘 토글"),
-("ko_KR", "LOC_CUI_CONFIG_TOGGLE_CITY_BANNERS",                                 "도시 배너 토글"),
-("ko_KR", "LOC_CUI_CONFIG_OPEN_UNIT_LIST",                                      "유닛 목록 열기"),
-
--- =============================================================================
 -- City Panel
 ("ko_KR", "LOC_CUI_CP_MANAGE_CITIZENS_TILES",                                   "시민 및 타일 관리"),
 
@@ -25,8 +15,8 @@ INSERT OR REPLACE INTO LocalizedText (Language, Tag, Text) VALUES
 -- =============================================================================
 -- Deal Panel
 ("ko_KR", "LOC_CUI_DP_GOLD_EDIT_TOOLTIP",                                       "왼클릭으로 증가, 우클릭으로 감소"),
-("ko_KR", "LOC_CUI_DP_THEY_HAVE_ITEM_TOOLTIP",                                  "이미 가지고 있는 물품"),
-("ko_KR", "LOC_CUI_DP_WE_HAVE_ITEM_TOOLTIP",                                    "이미 가지고 있는 물품"),
+("ko_KR", "LOC_CUI_DP_THEY_HAVE_ITEM_TOOLTIP",                                  "상대방이 이 물품을 이미 가지고 있습니다."),
+("ko_KR", "LOC_CUI_DP_WE_HAVE_ITEM_TOOLTIP",                                    "우리는 이 물품을 이미 가지고 있습니다."),
 
 -- =============================================================================
 -- Diplomatic Banner
@@ -69,14 +59,16 @@ INSERT OR REPLACE INTO LocalizedText (Language, Tag, Text) VALUES
 ("ko_KR", "LOC_CUI_MP_TOGGLE_CITY_BANNERS_TOOLTIP",                             "도시 배너 토글"),
 ("ko_KR", "LOC_CUI_MO_SHOW_TRADERS",                                            "교역로 보기"),
 ("ko_KR", "LOC_CUI_MP_TOGGLE_TRADERS_TOOLTIP",                                  "교역로 아이콘 표시"),
+("ko_KR", "LOC_CUI_MO_SHOW_RELIGIONS",                                          "종교 유닛 표시"),
+("ko_KR", "LOC_CUI_MP_TOGGLE_RELIGIONS_TOOLTIP",                                "종교 플래그 토글"),
 
 -- =============================================================================
 -- Report Screen
 ("ko_KR", "LOC_CUI_RS_SHOW_CITY_DETAILS",                                       "도시 상세정보 보기"),
 ("ko_KR", "LOC_CUI_RS_BUILDING_NUMBER",                                         "지어진 건물"),
 ("ko_KR", "LOC_CUI_RS_TOTALS",                                                  "전체: {1_num}"),
-("ko_KR", "LOC_CUI_RS_DEALS_OUTGOING",                                          "수출"),
-("ko_KR", "LOC_CUI_RS_DEALS_INCOMING",                                          "수입"),
+("ko_KR", "LOC_CUI_RS_DEALS_OUTGOING",                                          "Outgoing"),
+("ko_KR", "LOC_CUI_RS_DEALS_INCOMING",                                          "Incoming"),
 
 -- =============================================================================
 -- SpyInfo
@@ -91,8 +83,8 @@ INSERT OR REPLACE INTO LocalizedText (Language, Tag, Text) VALUES
 ("ko_KR", "LOC_CUI_WT_GOSSIP_LOG",                                              "가십 로그"),
 ("ko_KR", "LOC_CUI_WT_COMBAT_LOG",                                              "전투 로그"),
 ("ko_KR", "LOC_CUI_WT_PERSIST",                                                 "지속"),
-("ko_KR", "LOC_CUI_WT_GLOG_PERSIST_TOOLTIP",                                    "전 턴의 가십 로그를 제거하지 마세요."),
-("ko_KR", "LOC_CUI_WT_CLOG_PERSIST_TOOLTIP",                                    "전 턴의 전투 로그를 제거하지 마세요."),
+("ko_KR", "LOC_CUI_WT_GLOG_PERSIST_TOOLTIP",                                    "지나간 턴의 가십로그를 유지합니다."),
+("ko_KR", "LOC_CUI_WT_CLOG_PERSIST_TOOLTIP",                                    "지나간 컨의 가십로그를 유지합니다."),
 
 -- =============================================================================
 -- Trade Panel
@@ -114,7 +106,7 @@ INSERT OR REPLACE INTO LocalizedText (Language, Tag, Text) VALUES
 
 -- =============================================================================
 -- Production Panel
-("ko_KR", "LOC_CUI_PP_QUEUE_DEFAULT",                                           "기본 큐 사용"),
+("ko_KR", "LOC_CUI_PP_QUEUE_DEFAULT",                                           "기본적으로 큐 사용"),
 
 -- =============================================================================
 -- Great Works
@@ -126,17 +118,46 @@ INSERT OR REPLACE INTO LocalizedText (Language, Tag, Text) VALUES
 -- =============================================================================
 -- Notes
 ("ko_KR", "LOC_CUI_NOTES",                                                      "노트"),
-("ko_KR", "LOC_CUI_NOTE_LAST_EDIT",                                             "[ 최근 수정 턴: {1_num}턴 ]"),
+("ko_KR", "LOC_CUI_NOTE_LAST_EDIT",                                             "[ {1_num}턴 전 수정됨 ]"),
 ("ko_KR", "LOC_CUI_NOTE_EMPTY",                                                 "비어있는 노트"),
+
+-- =============================================================================
+-- Options
+("ko_KR", "LOC_CUI_OPTIONS_TAB_VICTORY",                                        "승리"),
+("ko_KR", "LOC_CUI_OPTIONS_TAB_LOG",                                            "로그"),
+("ko_KR", "LOC_CUI_OPTIONS_TAB_POPUP",                                          "팝업"),
+("ko_KR", "LOC_CUI_OPTIONS_TAB_REMIND",                                         "리마인드"),
+--
+("ko_KR", "LOC_CUI_OPTIONS_DESC_VICTORY",                                       "Please select the victory you want to track."),
+("ko_KR", "LOC_CUI_OPTIONS_DESC_LOG",                                           "Please select where the logs will be displayed."),
+("ko_KR", "LOC_CUI_OPTIONS_DESC_POPUP",                                         "Please select the popups you want to enable."),
+("ko_KR", "LOC_CUI_OPTIONS_DESC_REMIND",                                        "Please select the reminders you want to use."),
+("ko_KR", "LOC_CUI_OPTIONS_DESC_SPEED",                                         "Please select quick combat & movement objects."),
+--
+("ko_KR", "LOC_CUI_OPTIONS_LOG_SHOW_NONE",                                      "비활성화"),
+("ko_KR", "LOC_CUI_OPTIONS_LOG_DEFAULT",                                        "기본 위치"),
+("ko_KR", "LOC_CUI_OPTIONS_LOG_WORLDTRACKER",                                   "월드 트래커"),
+("ko_KR", "LOC_CUI_OPTIONS_LOG_BOTH",                                           "모두"),
+--
+("ko_KR", "LOC_CUI_OPTIONS_POPUP_RESEARCH",                                     "기술/사회정책 완료"),
+("ko_KR", "LOC_CUI_OPTIONS_POPUP_AUDIO",                                        "기술/사회정책 음성"),
+("ko_KR", "LOC_CUI_OPTIONS_POPUP_ERA_SCORE",                                    "시대 점수 획득"),
+("ko_KR", "LOC_CUI_OPTIONS_POPUP_GREAT_WORK",                                   "걸작 생성"),
+("ko_KR", "LOC_CUI_OPTIONS_POPUP_RELIC",                                        "성유물 획득"),
+--
+("ko_KR", "LOC_CUI_OPTIONS_REMIND_TECH",                                        "Tech complete by eureka"),
+("ko_KR", "LOC_CUI_OPTIONS_REMIND_CIVIC",                                       "Civic complete by inspire"),
+("ko_KR", "LOC_CUI_OPTIONS_REMIND_GOVERNMENT",                                  "Free government chance"),
+("ko_KR", "LOC_CUI_OPTIONS_REMIND_GOVERNOR",                                    "Governor titles available"),
+--
+("ko_KR", "LOC_CUI_OPTIONS_QUICK_COMBAT",                                       "빠른 전투"),
+("ko_KR", "LOC_CUI_OPTIONS_QUICK_MOVEMENT",                                     "빠른 이동"),
+("ko_KR", "LOC_CUI_OPTIONS_SPEED_PLAYER_ONLY",                                  "플레이어 만"),
+("ko_KR", "LOC_CUI_OPTIONS_SPEED_AI_ONLY",                                      "AI 만"),
 
 -- =============================================================================
 -- Screenshot
 ("ko_KR", "LOC_CUI_SCREENSHOT_TOOLTIP",                                         "스크린샷 모드 실행[NEWLINE][NEWLINE]스크린샷 모드는 대부분의 UI 요서를 숨겨 깔끔한 스크린샷을 찍을 수 있습니다.[NEWLINE][NEWLINE]왼클릭으로 모든 UI 숨기기[NEWLINE][NEWLINE]우클릭으로 도시 배너를 제외한 모든 UI 숨기기[NEWLINE]Alt키로 화면 회전[NEWLINE]ESC키로 스크린샷 모드를 종료하세요."),
-
--- =============================================================================
--- Civ Assistant
-("ko_KR", "LOC_CUI_CA_SURPLUS_RESOUCES",                                        "잉여 사치자원"),
-("ko_KR", "LOC_CUI_CA_SURPLUS_RESOUCES_OPT",                                    "잉여 사치자원"),
 
 -- =============================================================================
 ("ko_KR", "LOC_CUI_COLON", ": ");
